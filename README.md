@@ -11,4 +11,4 @@ _Para poder utilizar el piano necesitarás los siguientes componentes:_
 
 # ¿Cómo conecto cada componente?
 _Te dejo por aquí abajo un esquema para que puedas ver cómo se puede conectar:_
-![alt text](https://github.com/PaCoders/KKeyboard)
+![alt text](https://github.com/PaCoders/KKeyboard/blob/master/src/circuit.png)
