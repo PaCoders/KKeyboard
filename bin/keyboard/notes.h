@@ -1,6 +1,10 @@
-/*
-    NOTAS DE UN PIANO
+/* *******************************
+   *                             *
+   *      NOTAS DE UN PIANO      *
+   *                             *
+   *******************************
 */
+
 #ifndef _NOTES_H
 #define _NOTES_H
 
@@ -36,5 +40,13 @@
 #define E5 659.255
 #define C5 523.251
 #define B4 493.883
+
+class Keyboard{
+    public:
+        Keyboard(int l = 32); //constructor
+        const double tocar(int key); //Metodo observador
+    private:
+        double* tones; //Vector de tonos
+};
 
 #endif
