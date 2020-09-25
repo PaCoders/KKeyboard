@@ -12,3 +12,6 @@ _Para poder utilizar el piano necesitarás los siguientes componentes:_
 # ¿Cómo conecto cada componente?
 _Te dejo por aquí abajo un esquema para que puedas ver cómo se puede conectar:_
 ![alt text](https://github.com/PaCoders/KKeyboard/blob/master/src/circuit.png)
+
+# ¿Qué hago con los programas?
+_En primer lugar deberás cargar el archivo con extensión .ino en tu placa de arduino una vez conectados los componentes._
