@@ -1,12 +1,14 @@
 
 # ¿Quieres tocar el piano pero no tienes?
-_¡Pues ha llegado tu oportunidad si tienes una placa Arduino UNO R3! Si quieres tocar el piano es tan facil como descargar este código_
+_¡Pues ha llegado tu oportunidad si tienes una placa Arduino! Este proyecto consiste en poder tocas el piano en una placa arduino mediante una interfaz gráfica en un ordenador._
 
 # ¿Qué componentes necesito?
 _Para poder utilizar el piano necesitarás los siguientes componentes:_
 * Buzzer
 * LED RGB
+* 1 Pulsador
 * 3 resistencias 330 Ohms
+* 1 resistencia 2k Ohms
 * Cables (está claro)
 
 # ¿Cómo conecto cada componente?
