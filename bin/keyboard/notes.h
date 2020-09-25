@@ -8,6 +8,7 @@
 #ifndef _NOTES_H
 #define _NOTES_H
 
+/*
 #define C8 4186.01
 #define B7 3951.07
 #define LA_SI 3729.31
@@ -40,11 +41,12 @@
 #define E5 659.255
 #define C5 523.251
 #define B4 493.883
+*/
 
 class Keyboard{
     public:
-        Keyboard(int l = 32); //constructor
-        const double tocar(int key); //Metodo observador
+        Keyboard(int l = 10); //constructor
+        const double tocar(int key) const; //Metodo observador
     private:
         double* tones; //Vector de tonos
 };

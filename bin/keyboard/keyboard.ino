@@ -1,7 +1,7 @@
 
 //Piano en arduino
-
 #include "notes.h"
+#include <string.h>
 
 //--------- CONEXIONES UTILIZADAS --------------
 const int pButton = 9; //Boton
@@ -22,13 +22,10 @@ void setup() {
   inicio();
   pinMode(buzz, OUTPUT); //Conectamos el buzzer
   pinMode(pButton, INPUT);
+  prueba_piano();
 }
 
 void loop() {
-  while(status != LOW){
-    piano();
-    status = digitalRead(pButton);
-  }
   
 }
 
@@ -43,7 +40,23 @@ void inicio(){ //El LED conectado nos indica que esta todo OK en el sistema
   digitalWrite(pGreen,LOW);
 }
 
+void prueba_piano(){ //Para testear si va el piano
+  Keyboard teclas;
+  double frec;
+  for(int i = 0; i < 32; i++){
+    frec = teclas.tocar(i);
+    tone(buzz, frec, 1500);
+    delay(500);
+  }
+}
+
 void piano(){
   Keyboard teclas;
-  teclas.tocar(2);
+  double frec;
+  if(Serial.available() > 0){
+    int n = atoi(Serial.read());
+    frec = teclas.tocar(n);
+    tone(buzz, frec, 1500);
+  }
+ 
 }
