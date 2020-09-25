@@ -10,8 +10,12 @@ void setup() {
   pinMode(pRed, OUTPUT); //Conectamos las conexiones del LED RGB
   pinMode(pBlue, OUTPUT);
   pinMode(pGreen, OUTPUT);
+  pinMode(buzz, OUTPUT); //Conectamos el buzzer
 }
 
 void loop() {
-  
+  analogWrite(pRed, 19);
+  analogWrite(pBlue, 222);
+  analogWrite(pGreen, 240);
 }
+
