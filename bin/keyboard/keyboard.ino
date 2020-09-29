@@ -17,13 +17,16 @@ const int buzz = 2; //Buzzer
 int status = HIGH; //El boton por defecto no esta oprimido
 
 void setup() {
+  /*
   bool isBut = 0; //Variable para comprobar que el pulsador este conectado correctamente
   Serial.begin(9600); //Iniciamos el puerto serie
   pinMode(pRed, OUTPUT); //Conectamos las conexiones del LED RGB
   pinMode(pBlue, OUTPUT);
   pinMode(pGreen, OUTPUT);
+  */
   pinMode(buzz, OUTPUT); //Conectamos el buzzer
   pinMode(pButton, INPUT); //Conectamos el pulsador
+  /*
   inicio(); //Comprobamos que este todo bien conectado con esta funcion
   isBut = boton_conectado();
   if(isBut == 1){
@@ -36,6 +39,8 @@ void setup() {
     delay(1500);
     digitalWrite(pRed,LOW);
   }
+  */
+ tocar_melodia();
 }
 
 void loop() {
@@ -56,7 +61,19 @@ void inicio(){ //El LED conectado nos indica que esta todo OK en el sistema
 
 bool boton_conectado(){
   Serial.println("Oprima el pulsador para comprobar que funciona correctamente");
+  delay(1600);
   status = digitalRead(pButton);
   if(status == LOW) return true;
   else return false;
+}
+
+void tocar_melodia(){
+  tone(buzz,freq[31],200);
+  delay(100);
+  tone(buzz,freq[27],800);
+  delay(100);
+  tone(buzz,freq[27],125);
+  tone(buzz,freq[28],125);
+  tone(buzz,freq[30],125);
+
 }
